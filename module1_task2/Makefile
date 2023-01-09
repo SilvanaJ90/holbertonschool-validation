@@ -1,9 +1,12 @@
 build: ##jjjjj
-	hugo -s . -d dist/
+		hugo -s . -d dist/
 
 clean: ##jjjjj
-	rm -rf dist/
+		rm -rf dist/
 
 post: ##jjjjj
-	hugo new posts/$(POST_NAME).md
-	sed -i 's/title: .*/title:"$(POST_TITLE)"/' content/posts/$(POST_NAME).md
+		hugo new posts/$(POST_NAME).md
+		sed -i 's/title: .*/title:"$(POST_TITLE)"/' content/posts/$(POST_NAME).md
+
+help: ##jj
+		cat README.md
