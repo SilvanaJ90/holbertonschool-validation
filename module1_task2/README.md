@@ -4,8 +4,8 @@
 
 Before you begin this tutorial you must:
 
-[Install Hugo](https://gohugo.io/installation/)
-[Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
+- [Install Hugo](https://gohugo.io/installation/)
+- [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
 
 
 ## Lifecycle
