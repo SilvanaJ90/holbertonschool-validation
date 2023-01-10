@@ -9,18 +9,15 @@ Before you begin this tutorial you must:
 
 Requirements
 
-    - Use the theme “ananke” for the website by following the section Note for non-git users at the 
-[Step 3](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)
-    - Usage of Git Submodules is prohibited: there should be no file .gitmodules
-    - The website title should be “Awesome Inc.”
-    - The contents consists in a single blog post which title should be “Welcome to Awesome Inc.”, stored in a file named **welcome.md**
-    - All of the website’s source code is stored under a directory named **module1_task0**
-    - The command line hugo in **version 0.84.0** must be used
-    - The website is expected to be generated into the directory **module1_task0/dist/**
-    - The directory **module1_task0/dist/** must not be committed (it should be absent from the repository)
+Use the theme “ananke” for the website by following the section Note for non-git users at the [Step 3](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)
+- Usage of Git Submodules is prohibited: there should be no file .gitmodules
+- The website title should be “Awesome Inc.”
+- The contents consists in a single blog post which title should be “Welcome to Awesome Inc.”, stored in a file named **welcome.md**
+- All of the website’s source code is stored under a directory named **module1_task0**
+- The command line hugo in **version 0.84.0** must be used
+- The website is expected to be generated into the directory **module1_task0/dist/**
+- The directory **module1_task0/dist/** must not be committed (it should be absent from the repository)
 
-
-https://gohugo.io/getting-started/quick-start/#add-content
 
 
 ## Lifecycle
