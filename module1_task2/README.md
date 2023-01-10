@@ -5,6 +5,7 @@
 Before you begin this tutorial you must:
 
     [Install Hugo](https://gohugo.io/installation/)
+    [0x00-python-hello_world](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world).
     
     - Install Git
 
