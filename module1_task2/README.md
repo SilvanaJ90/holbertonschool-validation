@@ -4,10 +4,9 @@
 
 Before you begin this tutorial you must:
 
-    [Install Hugo](https://gohugo.io/installation/)
-    [0x00-python-hello_world](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world).
-    
-    - Install Git
+[Install Hugo](https://gohugo.io/installation/)
+[Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) 
+
 
 ## Lifecycle
 - build: Build: Generate the website from the markdown and configuration files in the directory dist/
