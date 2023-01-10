@@ -4,7 +4,8 @@
 
 Before you begin this tutorial you must:
 
-    - Install Hugo [GitHub Pages](https://gohugo.io/installation/).
+    [Install Hugo](https://gohugo.io/installation/)
+    
     - Install Git
 
 ## Lifecycle
