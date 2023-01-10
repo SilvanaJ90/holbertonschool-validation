@@ -1,4 +1,4 @@
-## uso
+# Go-Hugo Website 
 
 ## Prerequisites
 
@@ -17,10 +17,19 @@ Requirements
 - The command line hugo in **version 0.84.0** must be used
 - The website is expected to be generated into the directory **module1_task0/dist/**
 - The directory **module1_task0/dist/** must not be committed (it should be absent from the repository)
-
-
+Here is a simple example of the expected generation process:
+```
+➜ ls -l dist/ 2>/dev/null | wc -l
+0
+➜ hugo > /dev/null 2>&1
+➜ ls dist/ 2>/dev/null | grep -c 'index.html'
+1
+```
 
 ## Lifecycle
+
+lifecycle is generally staying the same. In this project, you will start to define this lifecycle via the following steps::
+
 - build: Build: Generate the website from the markdown and configuration files in the directory dist/
 
 - clean: Cleanup the content of the directory dist/
@@ -28,3 +37,22 @@ Requirements
 - post: Post: Create a new blog post whose filename and title come from the environment variables POST_TITLE and
 
 - help: prints out the list of targets and their usage. 
+
+```
+➜ ls -1 ./dist/
+➜ make build
+➜ ls -1 ./dist/index.html
+index.html
+
+➜ ls -1 ./content/posts/
+welcome.md
+➜ make POST_NAME=who-are-we POST_TITLE="Who are we" post
+➜ ls -1 ./content/posts/
+welcome.md who-are-we.md
+
+➜ make clean
+➜ ls -1 ./dist/
+➜
+➜ make help
+help: prints out the list of targets and their usage.
+```
