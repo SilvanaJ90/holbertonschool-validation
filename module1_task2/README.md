@@ -2,6 +2,11 @@
 
 ## Prerequisites
 
+Before you begin this tutorial you must:
+
+    - Install Hugo (the extended edition) [GitHub Pages](https://gohugo.io/installation/).
+    - Install Git
+
 ## Lifecycle
 - build: Build: Generate the website from the markdown and configuration files in the directory dist/
 
