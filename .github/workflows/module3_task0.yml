@@ -6,6 +6,8 @@ on:
     # Sequence of patterns matched against refs/heads
     branches:    
       - main
+        schedule:
+    - cron: '0 0 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
