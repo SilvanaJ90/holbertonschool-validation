@@ -10,14 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-      - name: Clone
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: install hugo
-        run: |
-          cd module3_task1/setup.sh 
-      - name: help
-        run: |
-          cd module3_task1/
+      - run: sudo module3_task1/setup.sh
+      - run: |
+          cd module3_task0/
           make help
           make build
           make clean
