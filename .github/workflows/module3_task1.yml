@@ -13,8 +13,9 @@ jobs:
       - name: Checkout
       - uses: actions/checkout@v3
       - run: sudo module3_task1/setup.sh
-      - run: cd module3_task1 && make help
-      - run: cd module3_task1 && make build
-      - run: cd module3_task1 && make clean
-      - run: cd module3_task1 && make build
-      - run: cd module3_task1 && make post POST_NAME="name" POST_TITLE="title"
+      - run: |
+          cd module3_task1
+          make help
+          make build
+          make clean
+          make POST_NAME=who-are-we POST_TITLE="Who are we" post
