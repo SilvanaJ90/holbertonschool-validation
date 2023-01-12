@@ -1,25 +1,25 @@
-
-name: module3_task1
+name: module3_task0
 on:
   push:
-    paths:
-      - 'module3_task1/**'
+    branches:
+      - main
   schedule:
     - cron: '0 0 * * *'
-
-permissions: read-all
-
+    
 jobs:
   build:
     runs-on: ubuntu-18.04
-
     steps:
       - name: Clone
         uses: actions/checkout@v3
       - name: install hugo
         run: |
-          cd module3_task1 && ./setup.sh 
+          cd module3_task1/setup.sh 
       - name: help
         run: |
           cd module3_task1/
+          make help
           make build
+          make clean
+          make build
+          make post POST_NAME="name" POST_TITLE="title"
