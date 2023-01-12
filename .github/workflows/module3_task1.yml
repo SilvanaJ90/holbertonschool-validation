@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - name: Clone the repository
+      - name: Clone
         uses: actions/checkout@v3
       - name: install hugo
         run: |
           cd module3_task1 && ./setup.sh 
-      - name: Validate Makefile help
+      - name: help
         run: |
           cd module3_task1/
           make build
