@@ -7,7 +7,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  build:
+  module3_task1_1:
 
     runs-on: ubuntu-18.04
 
@@ -18,7 +18,7 @@ jobs:
         cd module3_task1/
         sudo ./setup.sh
     - run: |
-          cd module3_task0/
+          cd module3_task1/
           make help
           make build
           make clean
