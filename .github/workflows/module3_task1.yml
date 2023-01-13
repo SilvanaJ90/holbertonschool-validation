@@ -18,21 +18,21 @@ jobs:
         run: |
           cd module3_task1/
           sudo ./setup.sh
-      - name: Build
+      - name: help
         run: |
           cd module3_task1
-          make build
+          make help
       - name: post
         env:
-          POST_NAME: my-post
-          POST_TITLE: My Post
+          POST_NAME: name
+          POST_TITLE: title
         run: |
           cd module3_task1
           make post
-      - name: yaml-lint
+      - name: build
         run: |
           cd module3_task1
-          make lint
+          make build
       - name: clean
         run: |
           cd module3_task1
