@@ -17,10 +17,9 @@ jobs:
     - run: |
         cd module3_task1/
         sudo ./setup.sh
-    - run: |
-          cd module3_task1/
-          make help
-          make build
-          make clean
-          make build
-          make post POST_NAME="name" POST_TITLE="title"
+    - run: sudo module3_task1/setup.sh
+    - run: cd module3_task1 && make help
+    - run: cd module3_task1 && make build
+    - run: cd module3_task1 && make clean
+    - run: cd module3_task1 && make build
+    - run: cd module3_task1 && make post POST_NAME="name" POST_TITLE="title"
