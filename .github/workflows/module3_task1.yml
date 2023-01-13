@@ -19,6 +19,9 @@ jobs:
           cd module3_task1/
           sudo ./setup.sh
       - name: help
+        run: |
+          cd module3_task1
+          make help
       - name: build1
         run: |
           cd module3_task1
