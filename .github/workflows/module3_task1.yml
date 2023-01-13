@@ -19,17 +19,7 @@ jobs:
           cd module3_task1/
           sudo ./setup.sh
       - name: help
-        run: |
-          cd module3_task1
-          make help
-      - name: post
-        env:
-          POST_NAME: name
-          POST_TITLE: title
-        run: |
-          cd module3_task1
-          make post
-      - name: build
+      - name: build1
         run: |
           cd module3_task1
           make build
@@ -37,3 +27,15 @@ jobs:
         run: |
           cd module3_task1
           make clean
+      - name: build2
+        run: |
+          cd module3_task1
+          make build
+      - name: post
+        env:
+          POST_NAME: name
+          POST_TITLE: title
+        run: |
+          cd module3_task1
+          make post
+
