@@ -12,10 +12,28 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-    - uses: actions/checkout@v3
-    - run: sudo module3_task1/setup.sh
-    - run: cd module3_task1 && make help
-    - run: cd module3_task1 && make build
-    - run: cd module3_task1 && make clean
-    - run: cd module3_task1 && make build
-    - run: cd module3_task1 && make post POST_NAME="name" POST_TITLE="title"
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: running setup.sh
+        run: |
+          cd module3_task1/
+          sudo ./setup.sh
+      - name: Build
+        run: |
+          cd module3_task1
+          make build
+      - name: post
+        env:
+          POST_NAME: my-post
+          POST_TITLE: My Post
+        run: |
+          cd module3_task1
+          make post
+      - name: yaml-lint
+        run: |
+          cd module3_task1
+          make lint
+      - name: clean
+        run: |
+          cd module3_task1
+          make clean
