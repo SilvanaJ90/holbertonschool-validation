@@ -13,8 +13,7 @@ help: ## prints out the list of targets and their usage.
 		cat README.md
 
 lint: ## should be updated to lint the files README.md and DEPLOY.md with markdownlint command line
-		yamllint "$(SHELLCHECK)" setup.sh >/dev/null 2>&1 || echo "Lint Failed"
-		markdownlint README.md DEPLOY.md
+		markdownlint "*.md"
 
 package: ## should create a file named awesome-website.zip (not committed and deleted by make clean).
 		hugo -s . -d dist/
