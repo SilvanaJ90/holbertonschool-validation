@@ -16,8 +16,8 @@ lint: ## should be updated to lint the files README.md and DEPLOY.md with markdo
 		markdownlint "*.md"
 
 package: ## should create a file named awesome-website.zip (not committed and deleted by make clean).
-		hugo
-		zip awesome-website.zip awesome-api dist/
+		hugo -s . -d dist/
+		zip awesome-website.zip dist/
 
 unit-tests: ## test
 
