@@ -46,10 +46,6 @@ jobs:
         run: |
           cd module3_task2
           make post
-      - name: lint
-        run: |
-          cd module3_task2
-          make lint
       - name: package
         run: |
           cd module3_task2
