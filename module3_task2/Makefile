@@ -13,8 +13,8 @@ help: ## prints out the list of targets and their usage.
 		cat README.md
 
 package: ## implemented and documented. It should create a file named awesome-website.zip (not committed and deleted by make clean).
-		hugo
-		zip awesome-website.zip ./dist
+		@hugo
+		@zip awesome-website.zip ./dist
 
 lint: ## should be updated to lint the files README.md and DEPLOY.md with markdownlint command line
 		markdownlint README.md
