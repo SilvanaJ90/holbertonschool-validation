@@ -1,6 +1,5 @@
 ---
-title: "Welcome"
-date: 2023-01-16T18:35:21-05:00
+title: "Welcome to Awesome Inc."
+date: 2023-01-10T15:46:42-05:00
 draft: true
 ---
-
