@@ -1,4 +1,4 @@
 
 # Create a  DEPLOY.md
 
-Create a GitHub Release using the “softprops/gh-release” GitHub Action named 1.0.0 and pointing to the tag 1.0.0
+Create a GitHub Release using the “softprops/gh-release” GitHub Action named 1.0.0
