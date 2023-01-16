@@ -23,6 +23,11 @@ jobs:
         run: |
           cd module3_task3
           make help
+          
+      - name: build1
+        run: |
+         cd module3_task3
+         make build
       - name: clean
         run: |
           cd module3_task2
