@@ -11,13 +11,13 @@ post: ## prints out the list of targets and their usage.
 	@hugo new ./content/posts/$(POST_NAME).md
 	@sed -i '/title:*/c\title: "$(POST_TITLE)"' ./content/posts/$(POST_NAME).md
 
-lint: ##  updated to lint the files README.md and DEPLOY.md with markdownlint command line
-	@markdownlint README.md
-	@markdownlint DEPLOY.md
-
 package: ##  implemented and documented. It should create a file named awesome-website.zip 
 	@hugo
 	@zip awesome-website.zip ./dist
+
+lint: ##  updated to lint the files README.md and DEPLOY.md with markdownlint command line
+	@markdownlint README.md
+	@markdownlint DEPLOY.md
 
 unit-tests: ## run unitest
 
