@@ -43,6 +43,10 @@ jobs:
       - name: package
         run: |
           cd module3_task2
+          make lint
+      - name: package
+        run: |
+          cd module3_task2
           make package
       - name: unit-tests
         run: |
