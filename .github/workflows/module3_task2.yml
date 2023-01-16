@@ -40,7 +40,7 @@ jobs:
         run: |
           cd module3_task2
           make post
-      - name: package
+      - name: lint
         run: |
           cd module3_task2
           make lint
