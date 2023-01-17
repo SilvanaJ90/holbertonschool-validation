@@ -3,73 +3,51 @@ on:
   push:
     branches:
       - main
+    tags:
+      - "1.0.0"
   schedule:
     - cron: '0 0 * * *'
-    
-permissions:
-  contents: write
+
+permissions: read-all
+
 jobs:
-  module3_task1_1:
+  builds:
+    name: jobs
     runs-on: ubuntu-18.04
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: running setup.sh
-        run: |
-          cd module3_task2/
-          sudo ./setup.sh
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: sudo module3_task3/setup.sh
       - name: install markdown
         run: npm install -g markdownlint-cli
-      - name: help
-        run: |
-          cd module3_task3
-          make help
-      - name: build1
-        run: |
-          cd module3_task3
-          make build
-      - name: clean
-        run: |
-          cd module3_task3
-          make clean
-      - name: build2
-        run: |
-          cd module3_task3
-          make build
-      - name: post
-        env:
-          POST_NAME: name
-          POST_TITLE: title
-        run: |
-          cd module3_task3
-          make post
-      - name: lint
-        run: |
-          cd module3_task3
-          make lint
-      - name: package
-        run: |
-          cd module3_task3
-          make package
-      - name: unit-tests
-        run: |
-          cd module3_task3
-          make unit-tests
-      - name: integration-tests
-        run: |
-          cd module3_task3
-          make integration-tests
-      - name: validate
-        run: |
-          cd module3_task3
-          make validate
-      - name: release
-          cd module3_task3
-        run: npm install -g markdownlint-cli && make lint
-      - uses: softprops/action-gh-release@v1
+
+      - run: cd module3_task3 && make help
+      - run: cd module3_task3 && make build
+      - run: cd module3_task3 && make clean
+      - run: cd module3_task3 && make build
+      - run: cd module3_task3 && make post POST_NAME="name" POST_TITLE="title"
+      - run: cd module3_task3 && make lint
+      - run: cd module3_task3 && make package
+      - run: cd module3_task3 && make unit-tests
+      - run: cd module3_task3 && make integration-tests
+      - run: cd module3_task3 && make validate
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/1.0.0')
         with:
           files: |
-            module3_task3/awesome-website.zip
-            module3_task3/DEPLOY.md
-          body_path: module3_task3/DEPLOY.md
+            awesome-website.zip
+            DEPLOY.md
+          body: |
+            ## What is in the archive and how to unarchive it?
+            ## What are the commands to start and stop the application?
+            ## How to customize where the application logs are written?
+            ## How to “quickly” verify that the application is running?
+            ## Create a release with the archive triggered by a tag
+      - run: gh release create v1.0.0 --title "v1.0.0" \
+          --notes DEPLOY.md 2>/dev/null || echo "OK"
