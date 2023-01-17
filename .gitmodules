@@ -31,3 +31,6 @@
 [submodule "module3_task4/themes/ananke"]
 	path = module3_task4/themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke
+[submodule "module3_task5/themes/ananke"]
+	path = module3_task5/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke
