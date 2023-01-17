@@ -15,6 +15,6 @@ How to “quickly” verify that the application is running (healthcheck)?
     To verify that the application is running correctly run the command: hugo server
     Then verify the status of the website in your localhost by clicking the http://localhost:1313/ given by the previous step
 
-tag
+## tag
 
 Add tag in deploy
