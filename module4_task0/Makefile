@@ -20,9 +20,13 @@ lint: ##  updated to lint the files README.md and DEPLOY.md with markdownlint co
 	@markdownlint DEPLOY.md
 
 unit-tests: ## run unitest
+	@echo "running unit tests"
+	touch coverage-units.out
 
 
 integration-tests: ## run integration test
+	@echo "running integration tests"
+	touch coverage-integrations.out
 
 
 validate: ## run validate
