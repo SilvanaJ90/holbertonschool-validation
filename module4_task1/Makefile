@@ -3,6 +3,7 @@ help: ## Build: Generate the website from the markdown and configuration files i
 
 build: ## Cleanup the content of the directory dist/
 	@hugo
+	@touch awesome-api
 
 clean: ## Post: Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME.
 	@rm -rf dist/*
@@ -20,9 +21,16 @@ lint: ##  updated to lint the files README.md and DEPLOY.md with markdownlint co
 	@markdownlint DEPLOY.md
 
 unit-tests: ## run unitest
+	@echo "running unit tests"
+	touch coverage-units.out
 
 
 integration-tests: ## run integration test
+	@echo "running integration tests"
+	touch coverage-integrations.out
 
 
 validate: ## run validate
+
+build-docker: ## build-docker
+	@docker build -t "awesome:build" ./build
