@@ -12,9 +12,8 @@ on:
 
 permissions: read-all
 
-jobs:
+jjobs:
   builds:
-    permissions: write-all
     name: jobs
     runs-on: ubuntu-18.04
 
@@ -23,9 +22,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - name: install hugo
-        run: make -C module4_task1 build-dependencies
-
+      - run: |
+          cd module4_task0/
+          sudo ./setup.sh
       - name: install markdown
         run: npm install -g markdownlint-cli
 
