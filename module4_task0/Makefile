@@ -2,7 +2,7 @@ help: ## Build: Generate the website from the markdown and configuration files i
 	@sed -ne '/@sed/!s/## //p' Makefile
 
 build: ## Cleanup the content of the directory dist/
-	@sudo apt install ./hugo.deb
+	@sudo apt install hugo
 	@hugo
 	touch awesome-api
 
