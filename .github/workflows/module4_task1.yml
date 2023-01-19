@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 16
       - run: |
-          cd module4_task0/
+          cd module4_task1/
           sudo ./setup.sh
       - name: install markdown
         run: npm install -g markdownlint-cli
