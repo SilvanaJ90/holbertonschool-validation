@@ -12,7 +12,7 @@ on:
 
 permissions: read-all
 
-jjobs:
+jobs:
   builds:
     name: jobs
     runs-on: ubuntu-18.04
