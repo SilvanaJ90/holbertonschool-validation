@@ -1,6 +1,7 @@
 help: ## Build: Generate the website from the markdown and configuration files in the directory dist/.
 	@sed -ne '/@sed/!s/## //p' Makefile
 
+.PHONY: build
 build: ## Cleanup the content of the directory dist/
 	@sudo apt install ./hugo.deb
 	@hugo
