@@ -60,7 +60,7 @@ jobs:
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v2.0.0
         with:
-          publish-dir: './module4_task0/dist'
+          publish-dir: './module4_task1/dist'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "🚀 Deployed on"
