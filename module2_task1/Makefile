@@ -1,4 +1,5 @@
 build:	## Builds the API binary file using go
+	make lint
 	go build
 
 run:	## Runs the built binary and send everything to awesome.log
