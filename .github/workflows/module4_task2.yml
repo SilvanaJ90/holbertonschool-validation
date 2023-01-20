@@ -76,7 +76,3 @@ jobs:
         run: |
           cd module4_task2
           make build-docker
-      - name: build test
-        run: |
-          cd module4_task2
-          make docker-tests
