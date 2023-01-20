@@ -44,3 +44,7 @@ build-docker: ## build-docker
 build-dependencies: ## build dependencies
 	@sudo apt install ./hugo.deb
 
+docker-tests: ## will use container-structure-test
+	@curl -LO https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64 && chmod +x container-structure-test-linux-amd64 && mkdir -p $HOME/bin && export PATH=$PATH:$HOME/bin && mv container-structure-test-linux-amd64 $HOME/bin/container-structure-test
+	@container-structure-test test --image gcr.io/registry/image:latest \ --config build/cst.yml
+
