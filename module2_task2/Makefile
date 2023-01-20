@@ -19,5 +19,8 @@ test:	## Tests the API using curl
 lint:	## Lints all the go files using golangci-lint
 	golangci-lint run
 
+unit-tests:	## Runs implemented unit test using go test
+	go test -v -short -coverprofile=coverage-units.out
+
 help:	## Show this help message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
