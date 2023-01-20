@@ -19,10 +19,10 @@ package: ##  implemented and documented. It should create a file named awesome-w
 	@zip awesome-website.zip ./dist
 
 lint: ##  updated to lint the files README.md and DEPLOY.md with markdownlint command line
-	@apt install curl -y
+	@sudo apt install curl -y
 	@curl --silent --location https://deb.nodesource.com/setup_16.x | bash -
-	@apt install nodejs -y
-	@npm install -g markdownlint-cli 1>&2
+	@sudo apt install nodejs -y
+	@sudo npm install -g markdownlint-cli 1>&2
 	@markdownlint README.md
 	@markdownlint DEPLOY.md
 
