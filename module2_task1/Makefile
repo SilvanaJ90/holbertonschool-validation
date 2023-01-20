@@ -15,5 +15,9 @@ test:	## Tests the API using curl
 	curl http://localhost:9999
 	curl http://localhost:9999/health
 
+
+lint:	## Lints all the go files using golangci-lint
+	golangci-lint run
+	
 help:	## Show this help message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
