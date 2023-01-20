@@ -7,7 +7,7 @@ import (
   "testing"
 )
 
-func Test_HelloHandler(t *testing.T) {
+func HelloHandler(t *testing.T) {
   if !testing.Short() {
     t.Skip("Flag `-short` absent: skipping Unit Tests.")
   }
