@@ -1,4 +1,4 @@
-name: module4_task1
+name: module4_task2
 on:
   push:
     branches:
@@ -23,21 +23,21 @@ jobs:
         with:
           node-version: 16
       - run: |
-          cd module4_task1/
+          cd module4_task2/
           sudo ./setup.sh
       - name: install markdown
         run: npm install -g markdownlint-cli
 
-      - run: cd module4_task1 && make help
-      - run: cd module4_task1 && make build
-      - run: cd module4_task1 && make clean
-      - run: cd module4_task1 && make build
-      - run: cd module4_task1 && make post POST_NAME="name" POST_TITLE="title"
-      - run: cd module4_task1 && make lint
-      - run: cd module4_task1 && make package
-      - run: cd module4_task1 && make unit-tests
-      - run: cd module4_task1 && make integration-tests
-      - run: cd module4_task1 && make validate
+      - run: cd module4_task2 && make help
+      - run: cd module4_task2 && make build
+      - run: cd module4_task2 && make clean
+      - run: cd module4_task2 && make build
+      - run: cd module4_task2 && make post POST_NAME="name" POST_TITLE="title"
+      - run: cd module4_task2 && make lint
+      - run: cd module4_task2 && make package
+      - run: cd module4_task2 && make unit-tests
+      - run: cd module4_task2 && make integration-tests
+      - run: cd module4_task2 && make validate
       - name: Checkout
         uses: actions/checkout@v3
       - name: Release
@@ -60,7 +60,7 @@ jobs:
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v2.0.0
         with:
-          publish-dir: './module4_task1/dist'
+          publish-dir: './module4_task2/dist'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "🚀 Deployed on"
@@ -74,5 +74,5 @@ jobs:
         timeout-minutes: 1
       - name: build docker
         run: |
-          cd module4_task1
+          cd module4_task2
           make build-docker
