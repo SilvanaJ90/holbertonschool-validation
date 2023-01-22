@@ -1,5 +1,5 @@
-build: check		## Builds a website using gohugo on the dist folder
-	hugo
+build:	## Build: Generate the website from the markdown and configuration files in the directory dist/.
+	hugo -s . -d dist/
 
 clean:		## Cleans the dist folder
 	rm -rf dist
