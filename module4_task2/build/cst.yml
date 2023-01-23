@@ -1,5 +1,0 @@
-metadataTest:
-  entrypoint: []
-  cmd: ["/bin/hadolint", "-"]
-  workdir: "/module4_task2"
-  user: ""
