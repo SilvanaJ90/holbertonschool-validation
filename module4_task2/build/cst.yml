@@ -1,5 +1,5 @@
-fileContentTests:
-- name: 'Debian Sources'
-  path: '/etc/apt/sources.list'
-  expectedContents: ['.*httpredir\.debian\.org.*']
-  excludedContents: ['.*gce_debian_mirror.*']
+metadataTest:
+  entrypoint: []
+  cmd: ["/bin/sh"]
+  workdir: "/module4_task2"
+  user: ""
