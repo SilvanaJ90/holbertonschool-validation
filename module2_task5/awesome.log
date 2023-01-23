@@ -1,1 +1,1 @@
-/bin/sh: 1: ./awesome-api: not found
+/bin/sh: 1: ./awesome-api: Permission denied
