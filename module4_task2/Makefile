@@ -22,6 +22,9 @@ package: ##  implemented and documented. It should create a file named awesome-w
 lint: ##  updated to lint the files README.md and DEPLOY.md with markdownlint command line
 	@curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs
 	@sudo npm install -g markdownlint-cli 1>&2
+	@sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+	@sudo chmod +x /bin/hadolint
+	@docker pull hadolint/hadolint
 	@markdownlint README.md
 	@markdownlint DEPLOY.md
 
